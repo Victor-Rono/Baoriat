@@ -64,6 +64,7 @@ var item = queryString.slice(6);
     setPurpose(data.purpose)
     setSize(data.size)
     setPhone(data.phoneNumber)
+    setRooms(data.rooms)
     
     
  })
@@ -88,12 +89,12 @@ if(size !== undefined){
   postName= `Land, ${size}`
 }
 
-if(rooms !=""){
+if(rooms != undefined){
   
   if(purpose ==="Renting"){
-    postName= `Rental, ${rooms} rooms`
+    postName= `Rental, ${rooms} room(s)`
   } else{
-    postName= `Home, ${rooms} rooms`
+    postName= `Home, ${rooms} room(s)`
   }
 
 }
@@ -146,7 +147,7 @@ if(rooms !=""){
               {
                 postName !=""?(<>
               <div className="item_title">
-              <h5 className="item_title_text"><y className="item_title_text1">{postName}</y>, <NumberFormat prefix={"Ksh "} className="comment_username" value={price} thousandSeparator= {true}/></h5>
+              <h5 className="item_title_text"><y className="item_title_text1">{postName}</y>, <NumberFormat prefix={"Ksh "} className="comment_username bg-light" value={price} thousandSeparator= {true}/></h5>
               </div>
                 
                 </>):(<></>)

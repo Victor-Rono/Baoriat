@@ -30,7 +30,7 @@ const [{user}, dispatch] = useStateValue();
         <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse">
+        <div className="collapse navbar-collapse bg-light" id="navbarCollapse">
 
           <div className="navbar-nav mr-auto">
          

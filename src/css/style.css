@@ -2220,3 +2220,7 @@ section {
 .blu {
   color: #2338d9;
 }
+
+#root {
+  background: #f5f5f5;
+}

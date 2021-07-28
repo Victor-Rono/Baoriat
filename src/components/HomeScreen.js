@@ -31,16 +31,13 @@ const HomeScreen = () => {
         <div className="hsc">
             <br /><br /><br /> <br />
     
- <div className=" buyContainer" id="">
+ <div className="buyContainer bg-light" id="">
               
 <Buy/>
   
 </div>
-  
-
-
-            
-            <div className="container home_screen">
+  <div className="grey_bg">
+  <div className="container home_screen">
             <center>
   <b className="" aria-expanded="false" >
     Some Available Assets & Services <i className="fa fa-angle-down"></i>
@@ -69,7 +66,7 @@ const HomeScreen = () => {
                    
                     else if(pst.businessName != undefined){
                           bizType = pst.businessName  
-                    } else if(pst.buildingName != ""){
+                    } else if(pst.buildingName != undefined){
                         bizType = `${pst.buildingName}, ${pst.floors} floors`
                         
                     } 
@@ -91,6 +88,11 @@ const HomeScreen = () => {
             </div>
         <br /><br /><br />   
         </div>
+  </div>
+
+
+            
+         
         </div>
     )
 }

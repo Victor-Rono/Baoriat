@@ -16,7 +16,8 @@
   margin: auto;
 }
 
-.item_title {
+.item_title_text {
+  pointer-events: none;
 }
 
 .item_title_text1,
