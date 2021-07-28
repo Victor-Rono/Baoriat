@@ -1,0 +1,41 @@
+.hsc {
+  background: whitesmoke;
+  height: 100vh;
+}
+.home_screen {
+  background-color: whitesmoke;
+  height: auto;
+}
+
+.hsc:hover {
+  text-decoration: none;
+}
+
+.allItems:hover {
+  text-decoration: none;
+}
+
+.collapse {
+  margin: auto;
+  padding-left: 35px;
+  background-color: white;
+}
+
+b {
+  color: #d9232d;
+}
+
+/* .buy_caption {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+} */
+
+#topBar {
+  display: flex;
+  min-width: 100%;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: 20px;
+  color: #d9232d;
+}

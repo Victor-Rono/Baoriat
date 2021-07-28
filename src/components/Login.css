@@ -1,0 +1,37 @@
+#login {
+  color: #d9232d;
+}
+a,
+a:hover {
+  color: #d9232d;
+}
+
+#login_button {
+  background-color: #d9232d;
+  color: white;
+}
+
+.form-c,
+.form-c:focus,
+.form-c:after,
+.form-c:active {
+  border: 0px;
+  border-bottom: 1px solid #d9232d;
+  color: #d9232d;
+  outline: none;
+  text-align: center;
+}
+
+label {
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: #2338d9;
+}
+
+.side_link {
+  color: #2338d9;
+}
+
+.link {
+  font-size: 1.3rem;
+}

@@ -1,0 +1,31 @@
+.hsc {
+  background: rgb(192, 191, 191);
+  height: 100vh;
+}
+.home_screen {
+  background-color: rgb(192, 191, 191);
+  height: auto;
+}
+
+.hsc:hover {
+  text-decoration: none;
+}
+
+.allItems:hover {
+  text-decoration: none;
+}
+
+.collapse {
+  margin: auto;
+  padding-left: 35px;
+  background-color: white;
+}
+
+b {
+  color: #d9232d;
+}
+
+.headerText {
+  color: #2338d9;
+  padding: 8px;
+}

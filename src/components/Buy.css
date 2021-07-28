@@ -1,0 +1,47 @@
+.buy {
+  padding: 6px;
+  margin: 6px;
+
+  border: 1px solid #2338d9;
+  max-width: 165px;
+  min-width: 165px;
+  /* #dc2f55; */
+}
+
+.sell2 {
+  padding: 6px;
+  margin: 6px;
+
+  border: 1px solid #07a00f;
+  background-color: #07a00f;
+  max-width: 165px;
+  min-width: 165px;
+  /* #dc2f55; */
+}
+
+.text-darkgreen {
+  color: white;
+}
+
+.buy:hover,
+.sell2:hover {
+  text-decoration: none;
+}
+
+.buy_caption {
+  color: #dc2f55;
+}
+
+.buy_intro {
+  color: #dc2f55;
+}
+
+.padded {
+  padding: 10px;
+}
+
+.padded2 {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}

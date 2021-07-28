@@ -1,0 +1,51 @@
+.post {
+  border: 1px solid lightgray;
+  margin: 8px;
+  max-width: 200px;
+  min-width: 200px;
+  background-color: #ffffff;
+  padding: 0;
+  box-shadow: 5px 3px rgb(196, 194, 194);
+  overflow: hidden;
+  max-height: 270px;
+  border-radius: 13px;
+}
+
+post:hover {
+  text-decoration: none;
+}
+
+.post_image {
+  width: 100%;
+  object-fit: scale-down;
+
+  max-height: 120px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.comment_username,
+.post_username {
+  font-weight: 600;
+  color: #aa141c;
+  outline: none;
+  border: none;
+}
+
+.comment_username:hover,
+.post_username:hover {
+  text-decoration: none;
+}
+.post_header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.post_avatar {
+  margin-right: 10px;
+}
+
+.post_caption {
+  padding: 20px;
+}

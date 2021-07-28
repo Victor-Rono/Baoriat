@@ -1,0 +1,30 @@
+.sell {
+  padding: 8px;
+  margin: 8px;
+  border: 1px solid #059b05;
+  max-width: 175px;
+  /* #dc2f55; */
+}
+
+.sell:hover {
+  text-decoration: none;
+}
+
+.sell_caption {
+  color: #160316;
+}
+
+.sell_intro {
+  color: #160316;
+}
+
+.padded {
+  padding: 20px;
+  margin: 20px;
+}
+
+.padded2 {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}

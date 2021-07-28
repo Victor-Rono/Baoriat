@@ -1,0 +1,12 @@
+#img1 {
+  background-image: url("https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#img2 {
+  background-image: url("https://images.pexels.com/photos/258384/pexels-photo-258384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+#img3 {
+  background: url("https://images.pexels.com/photos/636342/pexels-photo-636342.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  /* background-image: url("https://images.pexels.com/photos/932328/pexels-photo-932328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
+}
