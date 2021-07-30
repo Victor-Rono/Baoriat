@@ -62,15 +62,15 @@ const About = () => {
 			</h6>
 <center id="lastCard">
 	<br />
-<h5> <b>Baoriat Agencies</b> is connitted to helping you find the best place for you to settle in Uasin Gishu 
-	County and its surrounding sister counties. We walk you through the entire process of <b>acquiring your own property</b> 
+<h5> <strong className="">Baoriat Agencies</strong> is committed to helping you find the best place for you to settle in Uasin Gishu 
+	County and its surrounding sister counties. We walk you through the entire process of <strong>acquiring your own property</strong> 
 	&nbsp;in Uasin Gishu County and its surrounding sister counties until it has been transferred into your hands
 </h5>
 <br /><br />
 
 <h2>Call Us Now</h2>
 <br />
-<h1><b><i className="fa fa-phone"></i>0721-554-937</b></h1>
+<h1><strong><i className="fa fa-phone"></i>0721-554-937</strong></h1>
 
 </center>
 </div>

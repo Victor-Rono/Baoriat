@@ -15,7 +15,17 @@ const Buy = () => {
     return (
         <>
                <center>
-        <h5 className="headerText">Buy or sell assets and services within Uasin Gishu County</h5>
+               {/* {
+         username != undefined?(<>
+         
+         </>):(<>
+          <h6 className="text-danger"><b>NOTE: </b>For easy use of the app, and to access all features, log in or create an account.</h6>
+         </>)
+       } */}
+
+
+               <h5 className="headerText">Buy or sell assets and services within Uasin Gishu County. <Link to ="/about">Click here</Link> to learn more about us</h5>
+      
 
   <b className="" aria-expanded="false" >
     Categories <i className="fa fa-angle-down"></i>
@@ -36,10 +46,10 @@ const Buy = () => {
 </div>
     
 <center>
-<GiForestCamp color="#2338d9" size={30}/> 
-<h6 className="buy_caption">
+<GiForestCamp color="#2338d9" size={25}/> 
+<h7 className="buy_caption">
 Land
-</h6>
+</h7>
 </center>
 
 </div>
@@ -55,10 +65,10 @@ Land
 </div>
     
 <center>
-<GiFamilyHouse color="#2338d9" size={30}/>
-<h6 className="buy_caption">
+<GiFamilyHouse color="#2338d9" size={25}/>
+<h7 className="buy_caption">
  Homes
-</h6>
+</h7>
 </center>
 
 </div>
@@ -73,10 +83,10 @@ Land
 <h5 className="buy_username">  </h5> 
 </div>
 <center>
-<FaBuilding color="#2338d9" size={30}/>
-<h6 className="buy_caption">
+<FaBuilding color="#2338d9" size={25}/>
+<h7 className="buy_caption">
  Commercial Buildings
-</h6>
+</h7>
 </center>
 </div>
 </Link>
@@ -90,10 +100,10 @@ Land
 <h5 className="buy_username">  </h5> 
 </div>
  <center>
- <AiOutlineShop color="#2338d9" size={30} />  
- <h6 className="buy_caption">
+ <AiOutlineShop color="#2338d9" size={25} />  
+ <h7 className="buy_caption">
 Businesses for Sale
-</h6>
+</h7>
  </center>
 
 </div>
@@ -107,10 +117,10 @@ Businesses for Sale
 <h5 className="buy_username">  </h5> 
 </div>
 <center>
-  <FaBookReader color="#2338d9" size={30} /> 
-  <h6 className="buy_caption">
+  <FaBookReader color="#2338d9" size={25} /> 
+  <h7 className="buy_caption">
 Professional Services
-</h6>
+</h7>
 </center> 
 
 </div>
@@ -125,10 +135,10 @@ Professional Services
 <h5 className="buy_username">  </h5> 
 </div>
 <center>
-  <FiEdit color="white" size={30} /> 
-  <h6 className="text-darkgreen">
+  <FiEdit color="white" size={25} /> 
+  <h7 className="text-darkgreen">
 Sell an asset or service
-</h6>
+</h7>
 </center> 
 
 </div>

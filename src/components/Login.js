@@ -4,7 +4,7 @@ import {useHistory, BrowserRouter as Router, Route, Link } from "react-router-do
 import {db, auth} from "../firebase";
 import agencies from "../img/agencies.jpeg"
 import { useStateValue } from '../state/StateProvider';
-
+import useCollectionData from "react-firebase-hooks/firestore"
 
 
 
@@ -15,17 +15,24 @@ const Login = () => {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [connect, setConnect] = useState("");
+  
   const signIn = (e)=>{
- 
+    
+    setConnect(`<p className = 'text-success'>connecting.....</p>`);
+    
 
     const promise = auth.signInWithEmailAndPassword(email, password).then(auth =>{
      
       if(auth){
+        alert('Login successful')
         history.push('/')
       }
 
     })
-    promise.catch(e => alert(e.message));
+    promise.catch(e => alert(e.message),
+    setConnect("")
+    );
     
   }
 
@@ -52,6 +59,7 @@ const Login = () => {
                     <input type="password" name="password" id="password" className="form-c" onChange={(e)=>{setPassword(e.target.value)}} />
                   </div>
                   <div className="form-group">
+
                    
                    {
                      email != "" && password != ""? (<>

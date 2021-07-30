@@ -19,7 +19,7 @@ const Business = () => {
     const [{user}, dispatch] = useStateValue();
     const uzer = user.displayName;
     const mobile = user.phoneNumber;
-    
+    const history = useHistory();
    // const [caption, setCaption] = useState('');
    const [purpose, setPurpose] = useState("Sale");
     const [image, setImage] = useState([]);
@@ -62,7 +62,7 @@ const Business = () => {
                 
                     //This block of code was shamelessly copied from a medium.com article
                                 new Compressor(img, {
-                        quality: 0.63, // 0.6 can also be used, but its not recommended to go below.
+                        quality: 0.59, // 0.6 can also be used, but its not recommended to go below.
                         success: (compressedResult) => {
                           // compressedResult has the compressed file.
                           // Use the compressed file to upload the images to your server.        
@@ -93,7 +93,7 @@ const Business = () => {
 }
 
  
- const links = [];
+ var links = [];
 
     const handleUpload = ()=>{
         // setFlip(1);
@@ -147,7 +147,7 @@ const Business = () => {
                                                 links.push(urls);
                                                 setUploaded(uploaded+1)
                                                
-                                                if(links.length >=4){
+                                                if(links.length === 4){
                                 
                                                     var subCounty = "";
                                 
@@ -184,12 +184,14 @@ const Business = () => {
                                                         subCounty: subCounty
                                 
                                                     }).then(
-                                                     alert("Submitted Successfully")   
+                                                     alert("Submitted Successfully"),
+                                                     history.push("/sell")   
                                                     )
                                                     setImage([])
                                                     setUrl([])
+                                                    links=[];
                                                     setProgress(0)
-                                                    document.getElementById("price").value=""
+                                                    // document.getElementById("price").value=""
                                                     
                                                     
                                                     links.length = 0;
@@ -281,7 +283,7 @@ image.map((images)=>{
 
 <div className="choose">
 <label className="btn btn-danger">Upload Photos {image.length}/4
-<input type="file" capture="camera"  accept="image/png, image/gif, image/jpeg" multiple name="" id="" className="image_file" onChange={handleChange}/>
+<input type="file" capture="environment" accept="image/png, image/gif, image/jpeg" multiple name="" id="" className="image_file" onChange={handleChange}/>
 </label> 
 </div>
 
@@ -332,7 +334,7 @@ image.map((images)=>{
             </div>
 
             <div className="form-group">
-    <label for="exampleFormControlSelect"><h6>Monthly, Annual or Pay once:</h6></label>
+    <label for="exampleFormControlSelect">Payment Options:</label><br />
     <select className="form-c" id="exampleFormControlSelect" name="purpose" onChange={e=>setPaymentType(e.target.value)}>
     
       <option>Pay Once</option>
@@ -438,6 +440,7 @@ image.map((images)=>{
                </>)
            }
           </div>
+          <br />
           <Link to="/sell"><button className="btn btn-success"><i className="fa fa-angle-left"></i> Back</button></Link>
 
         </div>

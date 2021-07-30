@@ -6,13 +6,22 @@ import {db, auth, storage} from "../firebase";
 import NumberFormat from "react-number-format";
 import {GoLocation} from "react-icons/go";
 import {FaPhone} from "react-icons/fa"
+import { useStateValue } from '../state/StateProvider';
 
 const Listing = () => {
 const search = useLocation();
 const history = useHistory();
-const prevPage = ()=>{
-  history.goBack()
-}
+
+  const prevPage = ()=>{
+    history.goBack()
+  }
+
+
+
+
+
+    const [{user}, dispatch] = useStateValue();
+    const uzer = user.displayName;
 
 var queryString = document.location.search;
 var item = queryString.slice(6);
@@ -36,6 +45,7 @@ var item = queryString.slice(6);
  const [purpose, setPurpose] = useState("");
  const [size, setSize] = useState("");
  const [rooms, setRooms] = useState("");
+ const [imageArray, setImageArray] = useState([]);
  
 
 //paymentType={pst.paymentType} businessName={pst.businessName}
@@ -99,7 +109,37 @@ if(rooms != undefined){
 
 }
 
+const deletePost = ()=>{
 
+  var res = window.confirm("Are you sure you want to delete this post?")
+
+  if(res){
+
+    var path = imgUrl
+
+//  = delete all images from firebase storage;
+
+  var filename = storage.refFromURL(imgUrl)
+  var filename2 = storage.refFromURL(imgUrl2)
+  var filename3 = storage.refFromURL(imgUrl3)
+  var filename4 = storage.refFromURL(imgUrl4)
+
+  setImageArray([filename, filename2, filename3, filename4])
+ filename.delete()
+ filename2.delete()
+ filename3.delete()
+ filename4.delete()
+
+ db.collection("posts").doc(item).delete().then(
+  alert("Deleted Successfully"),
+  history.goBack()
+  
+)
+
+
+  }
+
+}
 
 
 //paymentType={pst.paymentType} businessName={pst.businessName}
@@ -182,7 +222,7 @@ if(rooms != undefined){
                 </div>
 <br />
                 <div className="item_location">
-                  <h6 className="item_location_header text-danger"><GoLocation size={20}/> Location information:</h6>
+                  <h6 className="item_location_header text-danger"><GoLocation size={20}/> Seller's location:</h6>
                 
                   <h6 className="sub_county">
                     Sub-County: <b className="text-danger">{subCounty}</b>
@@ -206,15 +246,20 @@ if(rooms != undefined){
                 
                 </>):(<></>)
               }
+
+              {
+                username === user.displayName?(<>
+                <center>
+                {/* <button className="btn btn-primary">Edit</button> */}
+                  <button className="btn btn-secondary" onClick= {deletePost}> <i className="fa fa-trash"></i> Delete This Post</button><br />
+                </center><br />
+                </>):(<></>)
+              }
               
         <div className="links">
           <center><span onClick={prevPage} className="btn btn-danger"><i className="fa fa-angle-left"></i> Back</span></center>
         </div>
 
-                {/* {username}  {phone}
-                <h6>{description} <br /><br /> {price}</h6>
-                <h6>{purpose}  {paymentType}</h6>
-                 */}
 
             </div>
 

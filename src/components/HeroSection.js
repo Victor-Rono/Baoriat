@@ -2,6 +2,7 @@ import React from 'react'
 import "./HeroSection.css"; 
 import {GiFarmTractor, GiForestCamp, GiHobbitDwelling, GiHomeGarage, GiFamilyHouse, GiKenya} from "react-icons/gi"
 import {FaHandshake, FaPencilRuler} from "react-icons/fa"
+
 const HeroSection = () => {
     return (
         <>
@@ -20,7 +21,7 @@ const HeroSection = () => {
               <GiKenya color="yellow" size={110}/>
               <h2 className="animate__animated animate__fadeInDown" id="yellow">Welcome to <span>Baoriat Agencies</span></h2>
               <p className="animate__animated animate__fadeInUp">Buy or sell Land, Homes or Commercial Buildings in Uasin Gishu County. You can also view properties available for sale</p>
-              <h2 className="animate__animated animate__fadeInDown" id="yellow">Baoriat app for Android Coming Soon</h2>
+              <h2 className="animate__animated animate__fadeInDown" id="yellow">Get Baoriat app on playstore</h2>
               {/* <a href="#about" className="btn-get-started animate__animated animate__fadeInUp scrollto">Learn More</a> */}
             </div>
           </div>

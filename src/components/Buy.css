@@ -1,21 +1,21 @@
 .buy {
-  padding: 6px;
-  margin: 6px;
+  padding: 3px;
+  margin: 2px;
 
   border: 1px solid #2338d9;
-  max-width: 165px;
-  min-width: 165px;
+  max-width: 125px;
+  min-width: 125px;
   /* #dc2f55; */
 }
 
 .sell2 {
   padding: 6px;
-  margin: 6px;
+  margin: 3px;
 
   border: 1px solid #07a00f;
   background-color: #07a00f;
-  max-width: 165px;
-  min-width: 165px;
+  max-width: 125px;
+  min-width: 125px;
   /* #dc2f55; */
 }
 

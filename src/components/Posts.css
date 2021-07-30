@@ -1,14 +1,15 @@
 .post {
   border: 1px solid lightgray;
   margin: 8px;
-  max-width: 200px;
-  min-width: 200px;
+  max-width: 155px;
+  min-width: 155px;
   background-color: #ffffff;
   padding: 0;
   box-shadow: 5px 3px rgb(196, 194, 194);
   overflow: hidden;
+  min-height: 270px;
   max-height: 270px;
-  border-radius: 13px;
+  border-radius: 0;
 }
 
 post:hover {
@@ -18,8 +19,8 @@ post:hover {
 .post_image {
   width: 100%;
   object-fit: scale-down;
-
-  max-height: 120px;
+  /* min-height: 130px; */
+  max-height: 125px;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
 }
@@ -48,4 +49,8 @@ post:hover {
 
 .post_caption {
   padding: 20px;
+}
+
+.noclick {
+  pointer-events: none;
 }

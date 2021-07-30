@@ -31,7 +31,7 @@ const Sell = () => {
 </div>
     
 <center>
-<GiForestCamp color="#059b05" size={45}/>
+<GiForestCamp color="#059b05" size={30}/>
 <h6 className="sell_caption">
  Sell or lease land
 </h6>
@@ -50,7 +50,7 @@ const Sell = () => {
 </div>
     
 <center>
-<GiFamilyHouse color="#059b05" size={45}/>
+<GiFamilyHouse color="#059b05" size={30}/>
 <h6 className="sell_caption">
  Sell or rent out a house
 </h6>
@@ -68,7 +68,7 @@ const Sell = () => {
 <h5 className="sell_username">  </h5> 
 </div>
 <center>
-<FaBuilding color="#059b05" size={45}/>
+<FaBuilding color="#059b05" size={30}/>
 <h6 className="sell_caption">
  Sell commercial buildings or rent them out
 </h6>
@@ -85,7 +85,7 @@ const Sell = () => {
 <h5 className="sell_username">  </h5> 
 </div>
  <center>
- <AiOutlineShop color="#059b05" size={45} />  
+ <AiOutlineShop color="#059b05" size={30} />  
  <h6 className="sell_caption">
 Sell or lease your business
 </h6>
@@ -102,7 +102,7 @@ Sell or lease your business
 <h5 className="sell_username">  </h5> 
 </div>
 <center>
-  <FaBookReader color="#059b05" size={45} /> 
+  <FaBookReader color="#059b05" size={30} /> 
   <h6 className="sell_caption">
 Offer Professional Services
 </h6>

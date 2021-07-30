@@ -5,10 +5,14 @@ import "./Login.css";
 import {db, auth, storage} from "../firebase";
 import {useHistory, BrowserRouter as Router, Route, Link } from "react-router-dom";
 import agencies from "../img/agencies.jpeg"
+import useCollectionData from "react-firebase-hooks/firestore"
+
+
 const Signup = () => {
 const history = useHistory();
   const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [confirm, setConfirm] = useState("");
     const [email, setEmail] = useState("");
     const [user, setUser] = useState("");
     const [phone, setPhone] = useState("");
@@ -70,6 +74,7 @@ const history = useHistory();
               console.log(authUser.user.uid)
             })
 
+            alert("Sign up Successful")
             history.push("/")
 
           });
@@ -78,7 +83,7 @@ const history = useHistory();
           
           
       } else{
-        alert("Phone number should have numbers only, no letters or special characters and should start with 07 or 01")
+        alert("Phone number should start with 07 or 01 and should have numbers only, no letters or special characters")
       }
 
        
@@ -127,7 +132,7 @@ alert('Username too short. It must be between 6 and 10 characters');
                  <div className="form-group" autocomplete="off">
                   <input autocomplete="false" name="hidden" type="text" type="hidden"/>
                     <label htmlFor="username" autoComplete="off" className="">username:</label><br />
-                    <input type="text" name="username" id="username" className="form-c" 
+                    <input type="text" name="username" id="username" className="form-c" maxlength="10"
                     onChange={(e)=>{setUsername(e.target.value)}}
                     />
                   </div>
@@ -141,7 +146,7 @@ alert('Username too short. It must be between 6 and 10 characters');
 
                   <div className="form-group">
                     <label htmlFor="Phone" className="">Phone Number:</label><br />
-                    <input type="tel" name="phone" id="phone" className="form-c" 
+                    <input type="tel" name="phone" id="phone" className="form-c" maxLength="10"
                     onChange={(e)=>{setPhone(e.target.value)}} placeholder="Start with 07 or 01"
                     />
                   </div>
@@ -153,13 +158,28 @@ alert('Username too short. It must be between 6 and 10 characters');
                     />
                   </div>
 
+                  <div className="form-group">
+                    <label htmlFor="password" className="">Confirm Password:</label><br />
+                    <input type="password" name="password" id="password" className="form-c"
+                    onChange={(e)=>{setConfirm(e.target.value)}} placeholder="at least 6 characters"
+                    />
 
+{
+                    password.length > 1 && confirm.length > 1 && password !== confirm?(<>
+                  <br />  <small className="text-danger">Passwords do not match</small>
+                    </>):(<></>)
+
+                  }
+
+                  </div>
+
+                 
 
                   <div className="form-group">
                 
                     
                  {
-                   username !="" && email !="" && password.length > 3 && phone !="" ?(<>
+                   username !="" && email !="" && password.length > 6 && password === confirm && phone !="" ?(<>
                     <button className = "btn btn-md" id="login_button" onClick = {signUp}>Sign up</button>
                    </>):(<></>)
                  }

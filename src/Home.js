@@ -72,8 +72,8 @@ const Home = () => {
         <h3><br /><br />
         <center className="blu">Log in or sign up to sell Property
             <br /><br />
-            <Link to="/login"><button className="btn btn-success btn-lg">Log In</button></Link><br/> <br />
-            <Link to="/"><button className="btn btn-danger btn-lg">Back Home</button></Link>
+            <Link to="/login"><button className="btn btn-danger btn-lg"><i className="fa fa-user"></i> Log In/ Sign Up</button></Link><br/> <br />
+            <Link to="/"><button className="btn btn-primary btn-lg"><i className="fa fa-angle-left"></i> Back Home</button></Link>
             </center></h3>
         </>
     )}
@@ -92,7 +92,19 @@ const Home = () => {
     <Route path="/land_sale">
     <Header/>
     <br /><br /><br /> 
-    <LandSale/>
+    {user?(
+        <LandSale/>
+    ):(
+        
+        <>
+        <h3><br /><br />
+        <center className="blu">Log in or sign up to sell Property
+            <br /><br />
+            <Link to="/login"><button className="btn btn-danger btn-lg"><i className="fa fa-user"></i> Log In/ Sign Up</button></Link><br/> <br />
+            <Link to="/"><button className="btn btn-primary btn-lg"><i className="fa fa-angle-left"></i> Back Home</button></Link>
+            </center></h3>
+        </>
+    )}
     
     </Route>
 
@@ -100,21 +112,57 @@ const Home = () => {
     <Route path="/home_sale">
     <Header/>
     <br /><br /><br /> 
-    <HomeSale/>
+    {user?(
+        <HomeSale/>
+    ):(
+        
+        <>
+        <h3><br /><br />
+        <center className="blu">Log in or sign up to sell Property
+            <br /><br />
+            <Link to="/login"><button className="btn btn-danger btn-lg"><i className="fa fa-user"></i> Log In/ Sign Up</button></Link><br/> <br />
+            <Link to="/"><button className="btn btn-primary btn-lg"><i className="fa fa-angle-left"></i> Back Home</button></Link>
+            </center></h3>
+        </>
+    )}
     
     </Route>
 
     <Route path="/building_sale">
     <Header/>
     <br /><br /><br /> 
-    <Commercial/>
+    {user?(
+        <Commercial/>
+    ):(
+        
+        <>
+        <h3><br /><br />
+        <center className="blu">Log in or sign up to sell Property
+            <br /><br />
+            <Link to="/login"><button className="btn btn-danger btn-lg"><i className="fa fa-user"></i> Log In/ Sign Up</button></Link><br/> <br />
+            <Link to="/"><button className="btn btn-primary btn-lg"><i className="fa fa-angle-left"></i> Back Home</button></Link>
+            </center></h3>
+        </>
+    )}
     
     </Route>
 
     <Route path="/business_sale">
     <Header/>
     <br /><br /><br /> 
-    <Business/>
+    {user?(
+        <Business/>
+    ):(
+        
+        <>
+        <h3><br /><br />
+        <center className="blu">Log in or sign up to sell Property
+            <br /><br />
+            <Link to="/login"><button className="btn btn-danger btn-lg"><i className="fa fa-user"></i> Log In/ Sign Up</button></Link><br/> <br />
+            <Link to="/"><button className="btn btn-primary btn-lg"><i className="fa fa-angle-left"></i> Back Home</button></Link>
+            </center></h3>
+        </>
+    )}
     
     </Route>
 
@@ -122,7 +170,19 @@ const Home = () => {
     <Route path="/professional_services">
     <Header/>
     <br /><br /><br /> 
-    <Service/>
+    {user?(
+        <Service/>
+    ):(
+        
+        <>
+        <h3><br /><br />
+        <center className="blu">Log in or sign up to sell Property
+            <br /><br />
+            <Link to="/login"><button className="btn btn-danger btn-lg"><i className="fa fa-user"></i> Log In/ Sign Up</button></Link><br/> <br />
+            <Link to="/"><button className="btn btn-primary btn-lg"><i className="fa fa-angle-left"></i> Back Home</button></Link>
+            </center></h3>
+        </>
+    )}
     
     </Route>
 

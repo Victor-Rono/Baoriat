@@ -3,6 +3,7 @@
 export const initialState = {
 
     basket: [],
+    posts:[],
     user: ""
     
 

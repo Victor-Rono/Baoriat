@@ -38,7 +38,7 @@ const BuyLand = () => {
     <div class="row" id="topBar">
         <div class="col-xs-6" id="side">
         <AiOutlineShop  color="#2338d9" size={30}/>
-            Businesses for sale/renting
+            Businesses for Sale/Renting
         </div>
         <div class="col-xs-6" id="side">
         <Link to="/" className="btn btn-danger"><i className="fa fa-angle-left"></i> &nbsp;Back</Link> 

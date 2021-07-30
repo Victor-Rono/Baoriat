@@ -53,7 +53,14 @@ const [{user}, dispatch] = useStateValue();
                 
                 
                 </>):(<></>)
+              
+
+
               }
+
+<Link to="/about" className="nav-item nav-link text-danger" data-toggle="collapse" data-target="#navbarCollapse">
+              <center><h5>About Us</h5></center>
+              </Link>
 
             {/* <Link to="/" className="nav-item nav-link active" data-toggle="collapse" data-target="#navbarCollapse" >
               <center><h5>Home</h5></center>
